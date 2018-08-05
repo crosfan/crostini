@@ -1,4 +1,5 @@
 #!/bin/bash
+#bash <(curl -s https://raw.githubusercontent.com/crosfan/crostini/master/penguin_bootstrap.sh)
 #Fix container time
 sudo ln -fs /usr/share/zoneinfo/US/Central /etc/localtime 
 sudo dpkg-reconfigure -f noninteractive tzdata
@@ -27,7 +28,7 @@ sudo apt install nodejs -y
 #HelloCrostini.js
 cd ~
 mkdir ~/Node
-curl -L https://raw.githubusercontent.com/crosfan/crostini/master/Node/HelloCrostini.js > ~/Node/HelloCrostini.js
+curl -s https://raw.githubusercontent.com/crosfan/crostini/master/Node/HelloCrostini.js > ~/Node/HelloCrostini.js
 node ~/Node/HelloCrostini.js &
 sleep 1
 x-www-browser http://penguin.linux.test:8080
