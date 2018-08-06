@@ -67,5 +67,5 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
-#Reboot (keymappings don't work till reboot)
-sudo reboot
+#Reboot (keymappings don't work till reboot, sudo reboot not working, use shutdown then open terminal)
+sudo shutdown -h now
