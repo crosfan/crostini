@@ -5,10 +5,13 @@ sudo ln -fs /usr/share/zoneinfo/US/Central /etc/localtime
 sudo dpkg-reconfigure -f noninteractive tzdata
 
 #Set ChromeOS Key Shortcuts in Crostini
-#sudo cp /etc/systemd/user/sommelier@0.service.d/cros-sommelier-override.conf /etc/systemd/user/sommelier@0.service.d/cros-sommelier-override.conf.orig
-#sudo sed -i 's/Environment="SOMMELIER_ACCELERATORS=Super_L"/Environment="SOMMELIER_ACCELERATORS=Super_L,<Alt>bracketright,<Alt>bracketleft,<Alt>equal"/g' /etc/systemd/user/sommelier@0.service.d/cros-sommelier-override.conf
-#sudo cp /etc/systemd/user/sommelier-x@0.service.d/cros-sommelier-x-override.conf /etc/systemd/user/sommelier-x@0.service.d/cros-sommelier-x-override.conf.orig
-#sudo sed -i 's/Environment="SOMMELIER_ACCELERATORS=Super_L"/Environment="SOMMELIER_ACCELERATORS=Super_L,<Alt>bracketright,<Alt>bracketleft,<Alt>equal"/g' /etc/systemd/user/sommelier-x@0.service.d/cros-sommelier-x-override.conf
+mkdir -p ~/.config/systemd/user
+cp -r /etc/systemd/user/sommelier@0.service.d /etc/systemd/user/sommelier-x@0.service.d ~/.config/systemd/user/
+sudo sed -i 's/Environment="SOMMELIER_ACCELERATORS=Super_L"/Environment="SOMMELIER_ACCELERATORS=Super_L,<Alt>bracketright,<Alt>bracketleft,<Alt>equal"/g' ~/.config/systemd/user/sommelier@0.service.d/cros-sommelier-override.conf
+sudo sed -i 's/Environment="SOMMELIER_ACCELERATORS=Super_L"/Environment="SOMMELIER_ACCELERATORS=Super_L,<Alt>bracketright,<Alt>bracketleft,<Alt>equal"/g' ~/.config/systemd/user/sommelier-x@0.service.d/cros-sommelier-x-override.conf
+systemctl --user daemon-reload
+systemctl --user restart sommelier@0.service
+systemctl --user restart sommelier-x@0.service
 
 #Downloads where we put stuff
 cd ~
