@@ -67,3 +67,5 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
+#Reboot (keymappings don't work till reboot)
+sudo reboot
