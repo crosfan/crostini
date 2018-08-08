@@ -1,5 +1,6 @@
 #!/bin/bash
 for (( c=1; c<=10; c++ ))
 do  
-   echo "Welcome $c times"
+   ps -aux >> ps_out.txt
+   sleep 1
 done
