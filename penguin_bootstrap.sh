@@ -62,7 +62,7 @@ sudo cp /usr/share/applications/discord.desktop /usr/share/applications/discord.
 sudo sed -i 's/Exec=\/usr\/share\/discord\/Discord/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/discord\/Discord/g' /usr/share/applications/discord.desktop
 
 #gpu testing stuff
-sudo apt install supertuxkart -y
+#sudo apt install supertuxkart -y
 sudo apt install mesa-utils -y
 
 #Upgrade everything
