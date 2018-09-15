@@ -5,10 +5,13 @@ sudo ln -fs /usr/share/zoneinfo/US/Central /etc/localtime
 sudo dpkg-reconfigure -f noninteractive tzdata
 
 #Set ChromeOS Key Shortcuts in Crostini
-mkdir -p ~/.config/systemd/user
-cp -r /etc/systemd/user/sommelier@0.service.d /etc/systemd/user/sommelier-x@0.service.d ~/.config/systemd/user/
-sudo sed -i 's/Environment="SOMMELIER_ACCELERATORS=Super_L"/Environment="SOMMELIER_ACCELERATORS=Super_L,<Alt>bracketright,<Alt>bracketleft,<Alt>equal"/g' ~/.config/systemd/user/sommelier@0.service.d/cros-sommelier-override.conf
-sudo sed -i 's/Environment="SOMMELIER_ACCELERATORS=Super_L"/Environment="SOMMELIER_ACCELERATORS=Super_L,<Alt>bracketright,<Alt>bracketleft,<Alt>equal"/g' ~/.config/systemd/user/sommelier-x@0.service.d/cros-sommelier-x-override.conf
+echo "echo Xft.dpi: 192 | xrdb -merge 
+export GDK_SCALE=2 
+export GDK_SCALE_DPI=192 
+export SOMMELIER_SCALE=1
+export SOMMELIER_ACCELERATORS=\"<Alt>Bracketright,<Alt>Bracketleft\"
+echo \"SOMMELIER_WAS_HERE\" `date` >> som.log
+" > ~/.sommelierrc
 systemctl --user daemon-reload
 systemctl --user restart sommelier@0.service
 systemctl --user restart sommelier-x@0.service
