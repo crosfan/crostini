@@ -33,17 +33,17 @@ sudo sed -i 's/Exec=\/usr\/share\/code\/code --unity-launch %F/Exec=sommelier -X
 sudo sed -i 's/Exec=\/usr\/share\/code\/code --new-window %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--new-window %F"/g' /usr/share/applications/code.desktop
 
 #NODE.JS
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt install nodejs -y 
+#curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+#sudo apt install nodejs -y 
 # sudo apt-get install build-essential -y 
 
 #HelloCrostini.js
-cd ~
-mkdir ~/Node
-curl -s https://raw.githubusercontent.com/crosfan/crostini/master/Node/HelloCrostini.js > ~/Node/HelloCrostini.js
-node ~/Node/HelloCrostini.js &
-sleep 1
-x-www-browser http://penguin.linux.test:8080
+#cd ~
+#mkdir ~/Node
+#curl -s https://raw.githubusercontent.com/crosfan/crostini/master/Node/HelloCrostini.js > ~/Node/HelloCrostini.js
+#node ~/Node/HelloCrostini.js &
+#sleep 1
+#x-www-browser http://penguin.linux.test:8080
 
 
 #Atom
@@ -59,14 +59,14 @@ sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --
 sudo apt install chromium -y
 
 #Discord App
-curl -L "https://discordapp.com/api/download?platform=linux&format=deb" > ~/Downloads/discord.deb
-sudo apt install ~/Downloads/discord.deb -y
-sudo cp /usr/share/applications/discord.desktop /usr/share/applications/discord.desktop.orig
-sudo sed -i 's/Exec=\/usr\/share\/discord\/Discord/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/discord\/Discord/g' /usr/share/applications/discord.desktop
+#curl -L "https://discordapp.com/api/download?platform=linux&format=deb" > ~/Downloads/discord.deb
+#sudo apt install ~/Downloads/discord.deb -y
+#sudo cp /usr/share/applications/discord.desktop /usr/share/applications/discord.desktop.orig
+#sudo sed -i 's/Exec=\/usr\/share\/discord\/Discord/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/discord\/Discord/g' /usr/share/applications/discord.desktop
 
 #gpu testing stuff
 #sudo apt install supertuxkart -y
-sudo apt install mesa-utils -y
+#sudo apt install mesa-utils -y
 
 #Upgrade everything
 sudo apt update
