@@ -70,9 +70,9 @@ sudo apt install chromium -y
 #sudo apt install mesa-utils -y
 
 #Joplin notes
-curl -L https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
-mkdir -p ~/.local/share/applications
-echo -e "[Desktop Entry]\nEncoding=UTF-8\nName=Joplin\nComment=Joplin for Desktop\nExec=/home/$USER/.joplin/Joplin.AppImage\nIcon=joplin\nStartupWMClass=Joplin\nType=Application\nCategories=Application > ~/.local/share/applications/joplin.desktop
+#curl -L https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+#mkdir -p ~/.local/share/applications
+#echo -e "[Desktop Entry]\nEncoding=UTF-8\nName=Joplin\nComment=Joplin for Desktop\nExec=/home/$USER/.joplin/Joplin.AppImage\nIcon=joplin\nStartupWMClass=Joplin\nType=Application\nCategories=Application > ~/.local/share/applications/joplin.desktop
 
 
 #Upgrade everything
