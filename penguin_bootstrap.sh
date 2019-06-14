@@ -23,6 +23,7 @@ mkdir ~/Downloads
 #Basic utilities
 sudo apt install iputils-ping -y
 sudo apt install apt-file -y
+sudo apt install fuse
 sudo apt-file update
 
 #VS Code
@@ -67,6 +68,10 @@ sudo apt install chromium -y
 #gpu testing stuff
 #sudo apt install supertuxkart -y
 #sudo apt install mesa-utils -y
+
+#Joplin notes
+curl -L https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
+
 
 #Upgrade everything
 sudo apt update
