@@ -5,16 +5,16 @@ sudo ln -fs /usr/share/zoneinfo/US/Central /etc/localtime
 sudo dpkg-reconfigure -f noninteractive tzdata
 
 #Set ChromeOS Key Shortcuts in Crostini
-echo "echo Xft.dpi: 192 | xrdb -merge 
-export GDK_SCALE=2 
-export GDK_SCALE_DPI=192 
-export SOMMELIER_SCALE=1
-export SOMMELIER_ACCELERATORS=\"<Alt>Bracketright,<Alt>Bracketleft\"
-echo \"SOMMELIER_WAS_HERE\" `date` >> som.log
-" > ~/.sommelierrc
-systemctl --user daemon-reload
-systemctl --user restart sommelier@0.service
-systemctl --user restart sommelier-x@0.service
+#echo "echo Xft.dpi: 192 | xrdb -merge 
+#export GDK_SCALE=2 
+#export GDK_SCALE_DPI=192 
+#export SOMMELIER_SCALE=1
+#export SOMMELIER_ACCELERATORS=\"<Alt>Bracketright,<Alt>Bracketleft\"
+#echo \"SOMMELIER_WAS_HERE\" `date` >> som.log
+#" > ~/.sommelierrc
+#systemctl --user daemon-reload
+#systemctl --user restart sommelier@0.service
+#systemctl --user restart sommelier-x@0.service
 
 #Downloads where we put stuff
 cd ~
@@ -29,9 +29,9 @@ sudo apt-file update
 #VS Code
 curl -L https://go.microsoft.com/fwlink/?LinkID=760868 > ~/Downloads/vscode.deb
 sudo apt install ~/Downloads/vscode.deb -y
-sudo cp /usr/share/applications/code.desktop /usr/share/applications/code.desktop.orig
-sudo sed -i 's/Exec=\/usr\/share\/code\/code --unity-launch %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--unity-launch %F"/g' /usr/share/applications/code.desktop
-sudo sed -i 's/Exec=\/usr\/share\/code\/code --new-window %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--new-window %F"/g' /usr/share/applications/code.desktop
+#sudo cp /usr/share/applications/code.desktop /usr/share/applications/code.desktop.orig
+#sudo sed -i 's/Exec=\/usr\/share\/code\/code --unity-launch %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--unity-launch %F"/g' /usr/share/applications/code.desktop
+#sudo sed -i 's/Exec=\/usr\/share\/code\/code --new-window %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--new-window %F"/g' /usr/share/applications/code.desktop
 
 #NODE.JS
 #curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
@@ -53,11 +53,11 @@ sudo sed -i 's/Exec=\/usr\/share\/code\/code --new-window %F/Exec=sommelier -X -
 
 #Firefox
 sudo apt install firefox-esr -y
-sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
-sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
+#sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
+#sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
 
 #Chromium
-sudo apt install chromium -y
+#sudo apt install chromium -y
 
 #Discord App
 #curl -L "https://discordapp.com/api/download?platform=linux&format=deb" > ~/Downloads/discord.deb
