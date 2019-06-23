@@ -23,7 +23,7 @@ mkdir -p ~/Downloads
 #Basic utilities
 sudo apt install iputils-ping -y
 sudo apt install apt-file -y
-sudo apt install fuse
+sudo apt install fuse -y
 sudo apt-file update
 
 #VS Code
