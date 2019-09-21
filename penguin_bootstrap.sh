@@ -54,21 +54,8 @@ sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 100M/g' /etc/php/7
 sudo sed -i 's/post_max_size = 8M/post_max_size = 100M/g' /etc/php/7.0/apache2/php.ini
 
 #MariaDb
-# sudo apt install mariadb-server -y
-# sudo mysql_secure_installation #Need to just script out the necessary commands that this script executes here instead of calling this
-# sudo mysql -u root -p #Need to automate this as well
-# CREATE DATABASE drupaldb;
-# GRANT ALL PRIVILEGES on drupaldb.* to 'drupal'@'localhost' identified by 'password';
-# FLUSH PRIVILEGES;
-# \q
-
-# Drupal install
-# curl -L https://www.drupal.org/download-latest/tar.gz > ~/Downloads/drupal.tar.gz
-# tar xzf ~/Downloads/drupal.tar.gz
-# sudo mv ~/Downloads/drupal-8.7.7/ /var/www/html/drupal
-# sudo chown -R root:root /var/www/html/drupal
-# Grab drupal virtual host file
-
+sudo apt install mariadb-server -y
+sudo mysql_secure_installation #Need to just script out the necessary commands that this script executes here instead of calling this
 
 #Upgrade everything
 sudo apt update
