@@ -33,46 +33,26 @@ sudo cp /usr/share/applications/code.desktop /usr/share/applications/code.deskto
 sudo sed -i 's/Exec=\/usr\/share\/code\/code --unity-launch %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--unity-launch %F"/g' /usr/share/applications/code.desktop
 sudo sed -i 's/Exec=\/usr\/share\/code\/code --new-window %F/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/code\/code "--new-window %F"/g' /usr/share/applications/code.desktop
 
-#NODE.JS
-#curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-#sudo apt install nodejs -y 
-# sudo apt-get install build-essential -y 
-
-#HelloCrostini.js
-#cd ~
-#mkdir ~/Node
-#curl -s https://raw.githubusercontent.com/crosfan/crostini/master/Node/HelloCrostini.js > ~/Node/HelloCrostini.js
-#node ~/Node/HelloCrostini.js &
-#sleep 1
-#x-www-browser http://penguin.linux.test:8080
-
-
-#Atom
-#curl -L https://atom.io/download/deb > ~/Downloads/atom.deb
-#sudo apt install ~/Downloads/atom.deb -y
-
 #Firefox
 sudo apt install firefox-esr -y
 sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
 sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
 
 #Chromium
-#sudo apt install chromium -y
+sudo apt install chromium -y
 
-#Discord App
-#curl -L "https://discordapp.com/api/download?platform=linux&format=deb" > ~/Downloads/discord.deb
-#sudo apt install ~/Downloads/discord.deb -y
-#sudo cp /usr/share/applications/discord.desktop /usr/share/applications/discord.desktop.orig
-#sudo sed -i 's/Exec=\/usr\/share\/discord\/Discord/Exec=sommelier -X --scale=0.8 --dpi=160 \/usr\/share\/discord\/Discord/g' /usr/share/applications/discord.desktop
+#Apache
+sudo apt install apache2 -y
 
-#gpu testing stuff
-#sudo apt install supertuxkart -y
-#sudo apt install mesa-utils -y
+#PHP Modules
+sudo apt install php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-mcrypt php7.0-intl php7.0-mysql php7.0-curl php7.0-gd php7.0-soap php7.0-xml php7.0-zip -y
+sudo cp /etc/php/7.0/apache2/php.ini /etc/php/7.0/apache2/php.ini.orig
+sudo sed -i 's/;date.timezone =/date.timezone = UTC/g' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/memory_limit = 128M/memory_limit = 512M/g' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 100M/g' /etc/php/7.0/apache2/php.ini
+sudo sed -i 's/post_max_size = 8M/post_max_size = 100M/g' /etc/php/7.0/apache2/php.ini
 
-#Joplin notes
-#curl -L https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
-#mkdir -p ~/.local/share/applications
-#echo -e "[Desktop Entry]\nEncoding=UTF-8\nName=Joplin\nComment=Joplin for Desktop\nExec=/home/$USER/.joplin/Joplin.AppImage\nIcon=joplin\nStartupWMClass=Joplin\nType=Application\nCategories=Application > ~/.local/share/applications/joplin.desktop
 
 
 #Upgrade everything
