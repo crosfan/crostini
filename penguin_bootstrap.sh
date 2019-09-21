@@ -65,6 +65,9 @@ sudo sed -i 's/post_max_size = 8M/post_max_size = 100M/g' /etc/php/7.0/apache2/p
 # Drupal install
 # curl -L https://www.drupal.org/download-latest/tar.gz > ~/Downloads/drupal.tar.gz
 # tar xzf ~/Downloads/drupal.tar.gz
+# sudo mv ~/Downloads/drupal-8.7.7/ /var/www/html/drupal
+# sudo chown -R root:root /var/www/html/drupal
+# Grab drupal virtual host file
 
 
 #Upgrade everything
