@@ -45,8 +45,10 @@ sudo apt install chromium -y
 sudo apt install apache2 -y
 
 #NodeJs
+sudo apt install build-essential software-properties-common -y
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt install nodejs -y
-sudo apt install build-essential -y
+
 
 #PHP Modules
 sudo apt install php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-mcrypt php7.0-intl php7.0-mysql php7.0-curl php7.0-gd php7.0-soap php7.0-xml php7.0-zip php7.0-mbstring -y
