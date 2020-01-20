@@ -24,6 +24,7 @@ mkdir -p ~/Downloads
 sudo apt install iputils-ping -y
 sudo apt install apt-file -y
 sudo apt install fuse -y
+sudo apt install xz-utils -y
 sudo apt-file update
 
 #VS Code
