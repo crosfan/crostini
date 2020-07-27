@@ -22,6 +22,7 @@ mkdir -p ~/Downloads
 
 #Basic utilities
 sudo apt install iputils-ping -y
+sudo apt install traceroute -y
 sudo apt install dnsutils -y
 sudo apt install apt-file -y
 sudo apt install fuse -y
