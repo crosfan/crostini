@@ -74,12 +74,12 @@ sudo apt install chromium -y
 #sudo mysql_secure_installation #Need to just script out the necessary commands that this script executes here instead of calling this
 
 #MERN Stack
-sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
-sudo echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | tee /etc/apt/sources.list.d/mongodb-org-4.list
+sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+sudo echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.list
 sudo apt-get update -y
 sudo apt-get install mongodb-org -y
 
-sudo curl -sL https://deb.nodesource.com/setup_16.x | bash -
+sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt-get install nodejs -y
 sudo npm install -g create-react-app
 
