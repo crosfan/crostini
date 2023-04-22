@@ -83,7 +83,7 @@ sudo apt install mongodb-org mongodb-org-database mongodb-org-server mongodb-org
 #mongodb needs this directory to store data, it will not start w/o it
 sudo mkdir -p /data/db  
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.35.0_amd64.deb
-sudo apt install mongodb-compass_1.35.0_amd64.deb -y
+sudo apt install ~/Downloads/mongodb-compass_1.35.0_amd64.deb -y
 
 sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install nodejs -y
