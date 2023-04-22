@@ -27,6 +27,8 @@ sudo apt install dnsutils -y
 sudo apt install apt-file -y
 sudo apt install fuse -y
 sudo apt install xz-utils -y
+sudo apt-get install gnupg2 -y
+
 sudo apt-file update
 
 #VS Code
@@ -41,7 +43,7 @@ sudo apt install firefox-esr -y
 
 #Google Chrome
 sudo touch /etc/default/google-chrome
-sudo apt update
+sudo apt-get update -y
 sudo apt install google-chrome -y
 #sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
 #sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
@@ -70,6 +72,21 @@ sudo apt install chromium -y
 #MariaDb
 #sudo apt install mariadb-server -y
 #sudo mysql_secure_installation #Need to just script out the necessary commands that this script executes here instead of calling this
+
+#MERN Stack
+sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+sudo echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | tee /etc/apt/sources.list.d/mongodb-org-4.list
+sudo apt-get update -y
+sudo apt-get install mongodb-org -y
+
+sudo curl -sL https://deb.nodesource.com/setup_16.x | bash -
+sudo apt-get install nodejs -y
+sudo npm install -g create-react-app
+
+npm install -g express-generator
+
+
+
 
 #Upgrade everything
 sudo apt update
