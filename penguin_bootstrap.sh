@@ -1,8 +1,8 @@
 #!/bin/bash
 #bash <(curl -s https://raw.githubusercontent.com/crosfan/crostini/master/penguin_bootstrap.sh)
 #Fix container time
-sudo ln -fs /usr/share/zoneinfo/US/Central /etc/localtime 
-sudo dpkg-reconfigure -f noninteractive tzdata
+#sudo ln -fs /usr/share/zoneinfo/US/Central /etc/localtime 
+#sudo dpkg-reconfigure -f noninteractive tzdata
 
 #Set ChromeOS Key Shortcuts in Crostini
 #echo "echo Xft.dpi: 192 | xrdb -merge 
