@@ -38,11 +38,16 @@ sudo apt install ~/Downloads/vscode.deb -y
 
 #Firefox
 sudo apt install firefox-esr -y
+
+#Google Chrome
+sudo touch /etc/default/google-chrome
+sudo apt update
+sudo apt install google-chrome -y
 #sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
 #sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
 
 #Chromium
-#sudo apt install chromium -y
+sudo apt install chromium -y
 
 #Apache
 #sudo apt install apache2 -y
@@ -72,4 +77,4 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
 #Reboot (keymappings don't work till reboot, sudo reboot not working, use shutdown then open terminal)
-sudo shutdown -h now
+sudo reboot
