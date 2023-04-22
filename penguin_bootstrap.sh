@@ -83,7 +83,7 @@ sudo curl -sL https://deb.nodesource.com/setup_16.x | bash -
 sudo apt-get install nodejs -y
 sudo npm install -g create-react-app
 
-npm install -g express-generator
+sudo npm install -g express-generator
 
 
 
