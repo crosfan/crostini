@@ -42,10 +42,7 @@ sudo apt install ~/Downloads/vscode.deb -y
 #Firefox
 sudo apt install firefox-esr -y
 
-#Google Chrome
-sudo touch /etc/default/google-chrome
-sudo apt-get update -y
-sudo apt install google-chrome-stable -y
+
 #sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
 #sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
 
