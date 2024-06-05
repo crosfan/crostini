@@ -42,7 +42,6 @@ sudo apt install ~/Downloads/vscode.deb -y
 #Firefox
 sudo apt install firefox-esr -y
 
-
 #sudo cp /usr/share/applications/firefox-esr.desktop /usr/share/applications/firefox-esr.desktop.orig
 #sudo sed -i 's/Exec=\/usr\/lib\/firefox-esr\/firefox-esr %u/Exec=sommelier -X --scale=0.45 --dpi=160 \/usr\/lib\/firefox-esr\/firefox-esr %u/g' /usr/share/applications/firefox-esr.desktop
 
@@ -72,22 +71,22 @@ sudo apt install chromium -y
 #sudo mysql_secure_installation #Need to just script out the necessary commands that this script executes here instead of calling this
 
 #MERN Stack
-curl -fsSL https://www.mongodb.org/static/pgp/server-5.0.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-5.gpg
-echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
-sudo apt update
-sudo apt upgrade -y
-sudo apt install mongodb-org mongodb-org-database mongodb-org-server mongodb-org-shell mongodb-org-mongos mongodb-org-tools -y
+#curl -fsSL https://www.mongodb.org/static/pgp/server-5.0.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-5.gpg
+#echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+#sudo apt update
+#sudo apt upgrade -y
+#sudo apt install mongodb-org mongodb-org-database mongodb-org-server mongodb-org-shell mongodb-org-mongos mongodb-org-tools -y
 #mongodb needs this directory to store data, it will not start w/o it
-sudo mkdir -p /data/db  
-wget https://downloads.mongodb.com/compass/mongodb-compass_1.35.0_amd64.deb
-sudo apt install ~/Downloads/mongodb-compass_1.35.0_amd64.deb -y
+#sudo mkdir -p /data/db  
+#wget https://downloads.mongodb.com/compass/mongodb-compass_1.35.0_amd64.deb
+#sudo apt install ~/Downloads/mongodb-compass_1.35.0_amd64.deb -y
 
-sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
-sudo apt install nodejs -y
-sudo npm install -g npm
-sudo npm install -g create-react-app
+#sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+#sudo apt install nodejs -y
+#sudo npm install -g npm
+#sudo npm install -g create-react-app
 
-sudo npm install -g express-generator
+#sudo npm install -g express-generator
 
 #Upgrade everything
 sudo apt update
