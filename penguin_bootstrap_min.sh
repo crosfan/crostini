@@ -27,6 +27,9 @@ sudo apt install firefox-esr -y
 #Chromium
 sudo apt install chromium -y
 
+#Needed for Webex Teams
+mkdir -p ~/.local/share
+
 #Upgrade everything
 sudo apt update
 sudo apt upgrade -y
