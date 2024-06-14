@@ -37,8 +37,6 @@ sudo apt install chromium -y
 
 #Webex Teams
 mkdir -p ~/.local/share
-curl -L https://binaries.webex.com/WebexDesktop-Ubuntu-Official-Package/Webex.deb > ~/Downloads/Webex.deb
-sudo apt install ~/Downlaods/Webex.deb -y
 
 #Upgrade everything
 sudo apt update
